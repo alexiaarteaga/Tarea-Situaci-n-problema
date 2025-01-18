@@ -200,8 +200,22 @@ void mergeArray(vector<Registro> &registros, vector<Registro> &aux, int left, in
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Funcion para buscar los registros por fechas
-void buscarPorFechas(const vector<Registro> &registros, const string &start_date, const string &end_date);
+void buscarPorFechas(const vector<Registro> &registros, const string &start_date, const string &end_date){
+    bool encontrado = false;
 
+    for (const auto &registro : registros) {
+        // Verificar si la fecha del registro está dentro del rango
+        if (registro.fecha >= start_date && registro.fecha <= end_date) {
+            cout << "Fecha: " << registro.mes << " " << registro.dia << " " << registro.hora
+                 << ", IP: " << registro.ip << ", Razon: " << registro.razon << endl;
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "No se encontraron registros en el rango de fechas proporcionado." << endl;
+    }
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Funcion que escribe los registros ordenados en un nuevo archivo
 void guardarRegistro(const string &filename, const vector<Registro> &registros);
