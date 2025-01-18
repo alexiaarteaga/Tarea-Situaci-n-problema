@@ -1,7 +1,7 @@
 /*
 * Integrantes:
  * Cesar Augusto Ramirez Davila | A01712439
- * Alexia Arteaga Mendoza |
+ * Alexia Arteaga Mendoza |A01663911
  * Luis Hubert Madrian Valero |
 
  * 15/01/2025
